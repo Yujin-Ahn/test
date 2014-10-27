@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:6
+-keep class com.bit.exam1027.exam1027 { <init>(...); }
+
