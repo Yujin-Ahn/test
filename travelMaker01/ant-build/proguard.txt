@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:6
+-keep class com.bit.travelMaker01.travelMaker01 { <init>(...); }
+

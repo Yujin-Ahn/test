@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Hello World</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+<!-- this page Style -->
+<style type="text/css">
+
+#header a,h1 {
+float: left
+}
+</style>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.4.css" />
+<link rel="stylesheet" href="css/jPushMenu.css" />
+
+<!-- JS -->
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/jPushMenu.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.mobile-1.4.4.js"></script>
+
+</head>
+<body class="cbp-spmenu-push">
+	<div data-role="page">
+		<div data-role="header" id="header" class="ui-bar ui-bar-">
+			<a href="#" data-role="button"
+				class="toggle-menu menu-left push-body ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+
+			<h1>Travel Maker</h1>
+			<button
+				class="toggle-menu menu-right push-body ui-btn ui-btn-right ui-icon-user ui-btn-icon-notext ui-corner-all"></button>
+		</div>
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
+			<h3>Travel Maker</h3>
+			<a href="#">모두보기</a> <a href="#">국내</a> <a href="#">아시아</a> <a
+				href="#">유럽</a> <a href="#">북미</a> <a href="#">남미</a> <a href="#">아프리카</a>
+			<a href="#">남태평양</a>
+		</nav>
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
+			<h3>Travel Maker</h3>
+			<h5>내 정보</h5>
+			<a href="test1.html">회원정보 수정</a> <a href="#">비밀번호 변경</a> <a href="#">로그아웃</a>
+			<h5>여행기록</h5>
+			<a href="map.html">여행지도</a> <a href="#">여행앨범</a> <a href="#">북마크</a>
+		</nav>
+		<div data-role="content" id="content" class="container" data-theme="a">
+			<div id="loginbox" style="margin-top: 50px;"
+				class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<div class="panel-title">Sign In</div>
+						<div
+							style="float: right; font-size: 80%; position: relative; top: -10px">
+							<a href="#">Forgot password?</a>
+						</div>
+					</div>
+
+					<div style="padding-top: 30px" class="panel-body">
+
+						<div style="display: none" id="login-alert"
+							class="alert alert-danger col-sm-12"></div>
+
+						<form id="loginform" class="form-horizontal" role="form">
+
+							<div style="margin-bottom: 25px" class="input-group">
+								<span class="input-group-addon"><i
+									class="glyphicon glyphicon-user"></i></span> <input
+									id="login-username" type="text" class="form-control"
+									name="username" value="" placeholder="username or email">
+							</div>
+
+							<div style="margin-bottom: 25px" class="input-group">
+								<span class="input-group-addon"><i
+									class="glyphicon glyphicon-lock"></i></span> <input
+									id="login-password" type="password" class="form-control"
+									name="password" placeholder="password">
+							</div>
+
+
+
+							<div class="input-group">
+								<div class="checkbox">
+									<label> <input id="login-remember" type="checkbox"
+										name="remember" value="1"> Remember me
+									</label>
+								</div>
+							</div>
+
+
+							<div style="margin-top: 10px" class="form-group">
+								<!-- Button -->
+
+								<div class="col-sm-12 controls">
+									<a id="btn-login" href="#" class="btn btn-success">Login </a> <a
+										id="btn-fblogin" href="test1.html" class="btn btn-primary">Login
+										with Facebook</a>
+
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<div class="col-md-12 control">
+									<div
+										style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
+										Don't have an account! <a href="#"
+											onClick="$('#loginbox').hide(); $('#signupbox').show()">
+											Sign Up Here </a>
+									</div>
+								</div>
+							</div>
+						</form>
+
+
+
+					</div>
+				</div>
+			</div>
+			<div id="signupbox" style="display: none; margin-top: 50px"
+				class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<div class="panel-title">Sign Up</div>
+						<div
+							style="float: right; font-size: 85%; position: relative; top: -10px">
+							<a id="signinlink" href="#"
+								onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign
+								In</a>
+						</div>
+					</div>
+					<div class="panel-body">
+						<form id="signupform" class="form-horizontal" role="form">
+
+							<div id="signupalert" style="display: none"
+								class="alert alert-danger">
+								<p>Error:</p>
+								<span></span>
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-md-3 control-label">Email</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="email"
+										placeholder="Email Address">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="firstname" class="col-md-3 control-label">First
+									Name</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="firstname"
+										placeholder="First Name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="lastname" class="col-md-3 control-label">Last
+									Name</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="lastname"
+										placeholder="Last Name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password" class="col-md-3 control-label">Password</label>
+								<div class="col-md-9">
+									<input type="password" class="form-control" name="passwd"
+										placeholder="Password">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="icode" class="col-md-3 control-label">Invitation
+									Code</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" name="icode"
+										placeholder="">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<!-- Button -->
+								<div class="col-md-offset-3 col-md-9">
+									<button id="btn-signup" type="button" class="btn btn-info">
+										<i class="icon-hand-right"></i> &nbsp Sign Up
+									</button>
+									<span style="margin-left: 8px;">or</span>
+								</div>
+							</div>
+
+							<div style="border-top: 1px solid #999; padding-top: 20px"
+								class="form-group">
+
+								<div class="col-md-offset-3 col-md-9">
+									<button id="btn-fbsignup" type="button" class="btn btn-primary">
+										<i class="icon-facebook"></i>   Sign Up with Facebook
+									</button>
+								</div>
+
+							</div>
+
+
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script>
+    $(document).ready(function($) {
+      $('.toggle-menu').jPushMenu();
+    });
+  </script>
+</body>
+</html>
