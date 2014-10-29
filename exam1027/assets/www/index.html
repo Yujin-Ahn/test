@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>exam 1027</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<!-- CSS -->
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/jPushMenu.css" />
+</head>
+<body>
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js">
+	</script>
+	<script type="text/javascript" src="js/jPushMenu.js"></script>
+
+	<!--call jPushMenu, required-->
+	<script>
+		jQuery(document).ready(function($) {
+			$('.toggle-menu').jPushMenu();
+		});
+	</script>
+
+	<div data-role="page" id="pageone" data-theme="c">
+		<div class="headerA" data-role="header" data-theme="a">
+			<div class="main">
+			<div class="headerLeft">
+				<button
+					class="toggle-menu menu-left push-body ui-btn ui-btn-b ui-btn-icon-notext ui-icon-bars"></button>
+			</div>
+			<div class="headerCenter">
+				Travel Maker
+			</div>
+			<div class="headerRight">
+				<button
+					class="toggle-menu menu-right push-body ui-btn ui-btn-b ui-btn-icon-notext ui-icon-user"></button>
+			</div>
+			</div>
+			<!-- Left menu element-->
+      <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
+        <h3>Travel Maker</h3>
+        <h4>공개앨범</h4>
+        <a href="#">모두보기</a> 
+        <a href="#">국내</a> 
+        <a href="#">아시아</a> 
+        <a href="#">유럽</a> 
+        <a href="#">북미</a> 
+        <a href="#">남미</a> 
+        <a href="#">아프리카</a>
+        <a href="#">남태평양</a>
+      </nav>
+      <!-- Right menu element-->
+      <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
+        <h3>Travel Maker</h3>
+        <h4>마이페이지</h4>
+        <a href="#">회원정보수정</a> 
+        <a href="#">비밀번호변경</a> 
+        <a href="#">로그아웃</a>
+        <h4>여행기록</h4>
+        <a href="#">여행지도</a> 
+        <a href="#">여행앨범</a> 
+        <a href="#">위치체크</a> 
+        <a href="#">북마크</a>
+      </nav>
+    </div>
+		</div>
+		<div data-role="content" class="ui-content">
+
+			
+	</div>
+
+</body>
+</html>
