@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Hello World</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	
+<!-- CSS -->
+ <link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.4.css" />
+<link rel="stylesheet" href="css/jPushMenu.css" />
+<style type="text/css">
+/* @font-face {
+font-family: 'EpicAwesomeness';
+src: url('fonts/EpicAwesomeness.eot');
+src: url('fonts/EpicAwesomeness.eot?#iefix') format('embedded-opentype'),
+url('fonts/EpicAwesomeness.woff') format('woff'),
+url('fonts/EpicAwesomeness.ttf') format('truetype'),
+url('fonts/EpicAwesomeness.svg#EpicAwesomeness') format('svg');
+font-weight: normal;
+font-style: normal;} */
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+    font-family: 'seasideresortnfregular';
+    src: url('fonts/seasrn__-webfont.eot');
+    src: url('fonts/seasrn__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/seasrn__-webfont.woff') format('woff'),
+         url('fonts/seasrn__-webfont.ttf') format('truetype'),
+         url('fonts/seasrn__-webfont.svg#seasideresortnfregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  color: #FFF;
+  text-align: center;
+  padding: 0;
+  font-family: 'Nanum Gothic', serif;
+  font-weight: bolder;
+}
+h1 {
+font-family: 'seasideresortnfregular', serif; 
+font-size: 50px;
+font-weight: bolder;
+}
+ .container {
+          width: 80%;
+          margin: 0px auto;
+          padding: 0;
+          vertical-align: center;
+         
+      }
+  .btnDiv {
+    width: 80%;
+    min-width: 150 px;
+    margin: 0px auto;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 20px;
+  }
+  .btnDiv div {   
+    padding: 5px;
+  }
+ 
+ .modal-dialog {
+  padding-top:10%;
+  height: 80% !important;
+}
+
+.modal-content {
+height: 100% !important;
+  overflow:auto;
+}
+
+.modal-body {
+width: 90%;
+height:80%;
+margin: 0 auto;
+  overflow: visible;
+}
+#myModal, #myModal2 {
+color: gray;
+text-align: left;}
+
+.element {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+</style>
+
+</head>
+<body>
+<!-- Modal1 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">로그인</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputEmail1" class="col-lg-3 control-label">이메일</label>
+    <div class="col-lg-9">
+      <input type="email" class="form-control" id="inputEmail1" placeholder="이메일주소">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword1" class="col-lg-3 control-label">패스워드</label>
+    <div class="col-lg-9">
+      <input type="password" class="form-control" id="inputPassword1" placeholder="패스워드">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <button type="submit" class="btn btn-success btn-block">로그인</button>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> 아이디 기억하기
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Modal2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" 
+aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">회원가입</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputEmail1" class="col-lg-3 control-label">이메일</label>
+    <div class="col-lg-9">
+      <input type="email" class="form-control" id="inputEmail1" placeholder="이메일주소">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputNickname" class="col-lg-3 control-label">닉네임</label>
+    <div class="col-lg-9">
+      <input type="text" class="form-control" id="inputNickname" placeholder="닉네임">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword1" class="col-lg-3 control-label">패스워드</label>
+    <div class="col-lg-9">
+      <input type="password" class="form-control" id="inputPassword1" placeholder="패스워드">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword2" class="col-lg-3 control-label">패스워드</label>
+    <div class="col-lg-9">
+      <input type="password" class="form-control" id="inputPassword2" placeholder="패스워드확인">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <button type="submit" class="btn btn-success btn-block">가입하기</button>
+    </div>
+  </div>
+</form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="container"  class="element">
+<h1>Travel Maker</h1><br/>
+<span>여행 기록 서비스</span>
+<div class = "btnDiv row">
+<!-- Button trigger modal -->
+  <div class="col-md-6 col-xs-6"><button type="button" 
+  data-toggle="modal" data-target="#myModal"
+  class="btn btn-primary btn-lg btn-block">로그인</button></div>
+  <div class="col-md-6 col-xs-6"><button type="button" 
+  data-toggle="modal" data-target="#myModal2"
+  class="btn btn-warning btn-lg btn-block">회원가입</button></div>
+</div>
+
+</div>
+
+
+
+ <script src="js/jquery-1.11.1.js"></script>
+<!-- <script src="js/jquery.mobile-1.4.4.js"></script> -->
+ <script src="js/jquery.backstretch.js"></script>
+ <script src="js/bootstrap.js"></script>
+  <script>
+        $.backstretch([
+         /*  "img/pot-holder.jpg",
+          "img/coffee.jpg",
+          "img/dome.jpg" */
+          "img/introimg1.jpg",
+          "img/introimg2.jpg",
+          "img/introimg3.jpg"
+        ], {
+            fade: 750,
+            duration: 4000
+        });
+    </script>
+</body>
+</html>
